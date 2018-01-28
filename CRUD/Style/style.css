@@ -1,0 +1,356 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  line-height: 1.40em;
+  color:#A7A1AE;
+  background-color:#1F2739;
+}
+
+h1 {
+  font-size:2em;
+  font-weight: 300;
+  line-height:1em;
+  text-align: left;
+  color: #4DC3FA;
+
+}
+
+h2 {
+  font-size:1em;
+  font-weight: 300;
+  text-align: center;
+  display: block;
+  line-height:1em;
+  padding-bottom: 2em;
+  color: #FB667A;
+}
+
+h2 a {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #FB667A;
+  text-decoration: none;
+}
+
+.blue { color: #185875; }
+.yellow { color: #FFF842; }
+
+.container th h1 {
+	  font-weight: bold;
+	  font-size: 1em;
+  text-align: left;
+  color: #185875;
+}
+
+.container td {
+	  font-weight: normal;
+	  font-size: 14px;
+  -webkit-box-shadow: 0 2px 2px -2px #0E1119;
+	   -moz-box-shadow: 0 2px 2px -2px #0E1119;
+	        box-shadow: 0 2px 2px -2px #0E1119;
+}
+
+.container {
+	  text-align: left;
+	  overflow: hidden;
+	  width: 70%;
+	  margin: 0 auto;
+    display: table;
+    padding: 0 0 8em 0;
+}
+
+.container td, .container th {
+	  padding-bottom: 1%;
+	  padding-top: 1%;
+    padding-left:1%;
+
+}
+
+/* Background-color of the odd rows */
+.container tr:nth-child(odd) {
+	  background-color: #323C50;
+
+}
+
+/* Background-color of the even rows */
+.container tr:nth-child(even) {
+	  background-color: #2C3446;
+
+}
+
+.container th {
+	  background-color: #1F2739;
+
+}
+
+.container td:first-child { color: #FB667A; }
+
+.container tr:hover {
+   background-color: #464A52;
+-webkit-box-shadow: 0 6px 6px -6px #0E1119;
+	   -moz-box-shadow: 0 6px 6px -6px #0E1119;
+	        box-shadow: 0 6px 6px -6px #0E1119;
+}
+/* #33b7ac seledin */
+/* #FFF842  yellow */
+/* #003b7a blue */
+.container td:hover  {
+  background-color: #000000;
+  color: #ffffff;
+  font-weight: bold;
+
+  box-shadow: #6d6d6d -1px 1px, #6d6d6d -2px 2px, #6d6d6d -3px 3px, #6d6d6d -4px 4px, #6d6d6d -5px 5px, #6d6d6d -6px 6px;
+  transform: translate3d(6px, -6px, 0);
+
+  transition-delay: 0s;
+	  transition-duration: 0.4s;
+	  transition-property: all;
+  transition-timing-function: line;
+}
+
+.container .th2 h1 {
+	  font-weight: bold;
+	  font-size: 1em;
+  text-align: left;
+  color: #185875;
+}
+
+.container .td2 {
+	  font-weight: normal;
+	  font-size: 14px;
+  -webkit-box-shadow: 0 2px 2px -2px #0E1119;
+	   -moz-box-shadow: 0 2px 2px -2px #0E1119;
+	        box-shadow: 0 2px 2px -2px #0E1119;
+}
+
+
+.container .td2, .container .th2 {
+	  padding-bottom: 1%;
+	  padding-top: 1%;
+    padding-left:1%;
+
+}
+
+/* Background-color of the odd rows */
+.container .tr2:nth-child(odd) {
+	  background-color: #323C50;
+
+}
+
+/* Background-color of the even rows */
+.container .tr2:nth-child(even) {
+	  background-color: #2C3446;
+
+}
+
+.container .th2 {
+	  background-color: #1F2739;
+
+}
+
+.container .td2:first-child { color: #009939; }
+
+.container .tr2:hover {
+   background-color: #464A52;
+-webkit-box-shadow: 0 6px 6px -6px #0E1119;
+	   -moz-box-shadow: 0 6px 6px -6px #0E1119;
+	        box-shadow: 0 6px 6px -6px #0E1119;
+}
+/* #33b7ac seledin */
+/* #FFF842  yellow */
+/* #003b7a blue */
+.container .td2:hover  {
+  background-color: #000000;
+  color: #ffffff;
+  font-weight: bold;
+
+  box-shadow: #6d6d6d -1px 1px, #6d6d6d -2px 2px, #6d6d6d -3px 3px, #6d6d6d -4px 4px, #6d6d6d -5px 5px, #6d6d6d -6px 6px;
+  transform: translate3d(6px, -6px, 0);
+
+  transition-delay: 0s;
+	  transition-duration: 0.4s;
+	  transition-property: all;
+  transition-timing-function: line;
+}
+
+.add, .edit, .save, .remove, .save2, .save3{
+  outline: none;
+  background: none;
+  border: none;
+}
+
+.edit, .save, .remove, .save2, .save3{
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+
+.add{
+  float: right;
+  background: transparent;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  font-size: 13px;
+  padding: 0;
+  padding: 3px 5px;
+  cursor: pointer;
+
+  &:hover{
+    background: #ffffff;
+    color: #00adee;
+  }
+}
+
+.save{
+
+  background: #32AD60;
+  color: #ffffff;
+
+  &:hover{
+    background: darken(#32AD60, 10%);
+  }
+}
+
+.edit{
+  background: #2199e8;
+  color: #ffffff;
+
+
+  &:hover{
+    background: darken(#2199e8, 10%);
+  }
+}
+
+.remove{
+  background: #EC5840;
+  color: #ffffff;
+
+
+   &:hover{
+    background: darken(#EC5840, 10%);
+  }
+}
+
+.save2{
+  background: #32AD60;
+  color: #ffffff;
+
+  &:hover{
+    background: darken(#32AD60, 10%);
+  }
+}
+
+.save3{
+  background: #009939;
+  color: #ffffff;
+
+  &:hover{
+    background: darken(#32AD60, 10%);
+  }
+}
+
+@media (max-width: 800px) {
+.container td:nth-child(4),
+.container th:nth-child(4) { display: none; }
+}
+
+.button_plus {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  background: #fff;
+  cursor: pointer;
+  border: 2px solid #095776;
+
+  top: 16%;
+  left: 49%;
+}
+
+.button_plus:after {
+  content: '';
+  position: absolute;
+  transform: translate(-50%, -50%);
+  height: 4px;
+  width: 50%;
+  background: #095776;
+  top: 50%;
+  left: 50%;
+}
+
+.button_plus:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #095776;
+  height: 50%;
+  width: 4px;
+}
+
+.button_plus:hover:before,
+.button_plus:hover:after {
+  background: #fff;
+  transition: 0.2s;
+}
+
+.button_plus:hover {
+  background-color: #095776;
+  transition: 0.2s;
+}
+
+
+nav {
+	text-align: center;
+	font-size: 1em;
+  }
+
+nav ul {
+  border-radius: .25em;
+  background: #1F2739;
+  list-style:none;
+  text-align: center;
+  }
+
+nav li {
+  position:relative;
+  display:inline-block;
+  border-bottom: none;
+  border-radius: .25em .25em 0 0;
+  }
+
+nav li:hover { box-shadow: 0 -5px 0 #f47321; }
+
+nav a {
+  color:#f47321;
+  display:block;
+  padding: .5em;
+  text-decoration:none;
+  }
+
+nav a:hover {
+  border-radius: 0 0 .25em .25em;
+  background: #f47321;
+  box-shadow: 0 5px 0 #dc6519;
+  color:white;
+  text-shadow: 0 -1px 0 rgba(0,0,0,0.3);
+  }
+
+.home { box-shadow: 0 -5px 0 #1F2739; }
+
+.home a {
+	background: #1F2739;
+	box-shadow: 0 5px 0 #1F2739;
+	color:white;
+	border-radius: 0 0 .25em .25em;
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.3);
+  }
+
+  .hideDetails {
+    display: none;
+    width: 70%;
+  }

@@ -4,12 +4,25 @@
     ViewBag.Title = "Products";
 }
 
-<h2>Products</h2>
+<h1>
+  <span class="blue"></span><i>Prod</i><span class="blue"><i>ucts</i></span>
+</h1>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
+<br><br>
+
+<div class="button_plus"></div><br>
+<form style="display:none;" class="asd" align="center">
+  <input type="text" name="Name" placeholder="Item name"/><br>
+  <input type="text" name="PostalCode" placeholder="Category"/><br>
+  <input type="text" name="Name" placeholder="Price"/><br><br>
+  <input class="save2" type="submit" name="Dodaj" value="Save"/>
+</form>
+
+<br><br>
+
+
+<table class="container">
+<thead>
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Name)
@@ -20,9 +33,10 @@
         <th>
             @Html.DisplayNameFor(model => model.Price)
         </th>
-        <th></th>
+        <th>Action</th>
     </tr>
-
+</thead>
+<tbody>
 @foreach (var item in Model) {
     <tr>
         <td>
@@ -35,11 +49,27 @@
             @Html.DisplayFor(modelItem => item.Price)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            <button class='edit'>Edit</button>
+            <button class='save3'>Details</button>
+            <button class='remove'>Delete</button>
         </td>
     </tr>
-}
 
+    <tr style="display: none;" class="tr2">
+        <td class="td2"> <b color="white">Details</b>
+        </td>
+        <td class="td2">Item:
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td class="td2">Category:
+            @Html.DisplayFor(modelItem => item.Category)
+        </td>
+        <td class="td2">Price:
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+
+    </tr>
+
+}
+</tbody>
 </table>

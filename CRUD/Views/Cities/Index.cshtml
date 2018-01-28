@@ -1,15 +1,28 @@
-﻿@model IEnumerable<CRUD.Models.City>
+@model IEnumerable<CRUD.Models.City>
 
 @{
     ViewBag.Title = "Cities";
 }
 
-<h2>Cities</h2>
+<h1>
+  <span class="blue"></span><i>Cit</i><span class="blue"><i>ies</i></span>
+</h1>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
+<br><br>
+
+<div class="button_plus"></div>
+<br>
+
+<form style="display:none;" class="asd" align="center">
+  <input class="form-control text-box single-line" id="Name" type="text" name="Name" placeholder="City name"/><br>
+  <input class="form-control text-box single-line" id="PostalCode" type="text" name="PostalCode" placeholder="Postal Code"/><br><br>
+  <input class="save2" type="submit" value="Create"/>
+</form>
+
+<br>
+
+<table class="container">
+<thead>
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Name)
@@ -17,9 +30,10 @@
         <th>
             @Html.DisplayNameFor(model => model.PostalCode)
         </th>
-        <th></th>
+        <th>Action</th>
     </tr>
-
+</thead>
+<tbody>
 @foreach (var item in Model) {
     <tr>
         <td>
@@ -29,11 +43,25 @@
             @Html.DisplayFor(modelItem => item.PostalCode)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            <button class='edit'>Edit</button>
+            <button class='save3'>Details</button>
+            <button class='remove'>Delete</button>
         </td>
     </tr>
-}
 
+    <tr style="display: none;" class="tr2">
+        <td class="td2"> <b color="white">Details</b>
+        </td>
+        <td class="td2">City name:
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td class="td2">Postal code:
+            @Html.DisplayFor(modelItem => item.PostalCode)
+        </td>
+
+    </tr>
+
+
+}
+</tbody>
 </table>

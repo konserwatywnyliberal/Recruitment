@@ -4,12 +4,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - CRUD application</title>
-    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <!--   <link href="~/Content/Site.css" rel="stylesheet" type="text/css" /> -->
+    <link rel="stylesheet" type="text/css" href="~/Style/style.css">
+  <!--  <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" /> -->
     <script src="~/Scripts/modernizr-2.6.2.js"></script>
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+<!--    <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -27,17 +28,27 @@
                 </ul>
             </div>
         </div>
-    </div>
+    </div> -->
+    <nav>
+      <ul>
+        <li class="home"><b>@Html.ActionLink("CRUD", "Index", "Home", new { area = "" }, new { @class = "a" })</b></li>
+        <li class="home"><b>@Html.ActionLink("People", "Index", "People", new { area = "" }, new { @class = "a" })</b></li>
+        <li class="home"><b>@Html.ActionLink("Cities", "Index", "Cities", new { area = "" }, new { @class = "a" })</b></li>
+        <li class="home"><b>@Html.ActionLink("Products", "Index", "Products", new { area = "" }, new { @class = "a" })</b></li>
+      </ul>
+    </nav>
+<hr color="#003b7a">
 
-    <div class="container body-content">
+
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year</p>
-        </footer>
+
+
     </div>
 
-    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+    	integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    	crossorigin="anonymous"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/cities.js"></script>
 </body>
 </html>
